@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  /* --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
+  --background: white;
+  --foreground: black;
+}
+
+[data-theme='dark'] {
+  --background: black;
+  --foreground: white;
+}
+
+@layer components {
+  .drop-down {
+    @apply xl:absolute md:absolute top-[65px];
+  }
+
+  .icon-stroke {
+    @apply stroke-black-900 dark:stroke-white-100
+  }
+  
+  .photo-zoom:hover{
+    @apply scale-[105%];
+  }
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.home-landing {
+  background-image: url('/assets/homelanding.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.blacknav.active {
+  transition: .3s, border-color 2s;
+  transition-timing-function: ease-out;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+.blacknav .active {
+  transition: .3s, border-color 2s;
+  transition-timing-function: ease-out;
+  z-index: 1000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+.dark body{
+  color: rgb(var(--foreground-rgb));
+  background: rgb(28 28 28/var(--tw-bg-opacity))
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white
+}
+
+/* Input-Controller Theme */
+.inputBoxContact {
+  width: 100%;
+  background: #f5f5f5;
+  border: 0.5px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.dark .inputBoxContact {
+  background: #181818;
+  border: .5px solid #111;
+}
