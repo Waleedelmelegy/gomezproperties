@@ -1,11 +1,10 @@
 'use client'
-const HeroSection = ({ children }) => {
+const HeroSection = () => {
   return (
     <section className='overflow-x-hidden block static '>
       <div className='home-landing  landing-height overflow-x-hidden h-screen sm:h-[480px] lg:h-[660px] overflow-y-hidden'>
         <div className='landing-height overlay absolute top-0 left-0 w-screen lg:h-[375px] h-[200px] opacity-70 z-10 bg-gradient-to-b from-[#000000]' />
         <div className='landing-height overlay absolute top-0 left-0 w-screen h-screen sm:h-[480px] lg:h-[660px] z-10 bg-[#000] bg-opacity-70 dark:bg-opacity-90' />
-        {children}
         <div className='landing-height w-full m-auto grid grid-cols-12 lg:w-5/6 sm:h-[480px] lg:h-[660px] h-screen overflow-y-hidden z-30 '>
           <div className=' w-full pb-4 col-span-12 lg:col-span-6'>
             <div className='maincontent z-20 pt-[4rem] lg:pt-[7rem] '>
